@@ -1,0 +1,24 @@
+[0.758s] Invoking command in '/home/UNT/md0708/ROS_DDS_Monitor/src/ros_dds_monitor': PYTHONPATH=/home/UNT/md0708/ROS_DDS_Monitor/build/ros_dds_monitor/prefix_override:/home/UNT/md0708/ROS_DDS_Monitor/install/ros_dds_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ros_dds_monitor build --build-base /home/UNT/md0708/ROS_DDS_Monitor/build/ros_dds_monitor/build install --record /home/UNT/md0708/ROS_DDS_Monitor/build/ros_dds_monitor/install.log --single-version-externally-managed
+[0.938s] running egg_info
+[0.939s] writing ../../build/ros_dds_monitor/ros_dds_monitor.egg-info/PKG-INFO
+[0.939s] writing dependency_links to ../../build/ros_dds_monitor/ros_dds_monitor.egg-info/dependency_links.txt
+[0.939s] writing entry points to ../../build/ros_dds_monitor/ros_dds_monitor.egg-info/entry_points.txt
+[0.939s] writing requirements to ../../build/ros_dds_monitor/ros_dds_monitor.egg-info/requires.txt
+[0.939s] writing top-level names to ../../build/ros_dds_monitor/ros_dds_monitor.egg-info/top_level.txt
+[0.941s] reading manifest file '../../build/ros_dds_monitor/ros_dds_monitor.egg-info/SOURCES.txt'
+[0.942s] writing manifest file '../../build/ros_dds_monitor/ros_dds_monitor.egg-info/SOURCES.txt'
+[0.942s] running build
+[0.942s] running build_py
+[0.942s] running install
+[0.942s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.942s]   warnings.warn(
+[0.942s] running install_lib
+[0.943s] running install_data
+[0.943s] running install_egg_info
+[0.945s] removing '/home/UNT/md0708/ROS_DDS_Monitor/install/ros_dds_monitor/lib/python3.10/site-packages/ros_dds_monitor-0.0.1-py3.10.egg-info' (and everything under it)
+[0.945s] Copying ../../build/ros_dds_monitor/ros_dds_monitor.egg-info to /home/UNT/md0708/ROS_DDS_Monitor/install/ros_dds_monitor/lib/python3.10/site-packages/ros_dds_monitor-0.0.1-py3.10.egg-info
+[0.945s] running install_scripts
+[0.961s] Installing listener script to /home/UNT/md0708/ROS_DDS_Monitor/install/ros_dds_monitor/lib/ros_dds_monitor
+[0.961s] Installing talker script to /home/UNT/md0708/ROS_DDS_Monitor/install/ros_dds_monitor/lib/ros_dds_monitor
+[0.961s] writing list of installed files to '/home/UNT/md0708/ROS_DDS_Monitor/build/ros_dds_monitor/install.log'
+[0.977s] Invoked command in '/home/UNT/md0708/ROS_DDS_Monitor/src/ros_dds_monitor' returned '0': PYTHONPATH=/home/UNT/md0708/ROS_DDS_Monitor/build/ros_dds_monitor/prefix_override:/home/UNT/md0708/ROS_DDS_Monitor/install/ros_dds_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ros_dds_monitor build --build-base /home/UNT/md0708/ROS_DDS_Monitor/build/ros_dds_monitor/build install --record /home/UNT/md0708/ROS_DDS_Monitor/build/ros_dds_monitor/install.log --single-version-externally-managed

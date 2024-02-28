@@ -1,0 +1,4 @@
+[console_scripts]
+listener = ros_dds_monitor.subscriber_member_function:main
+talker = ros_dds_monitor.publisher_member_function:main
+
