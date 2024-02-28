@@ -14,24 +14,30 @@
 
 import rclpy
 from rclpy.node import Node
+from rclpy.time import Time
 
 from std_msgs.msg import String
 
+import os
 
 class MinimalPublisher(Node):
 
     def __init__(self):
         super().__init__('minimal_publisher')
-        self.publisher_ = self.create_publisher(String, 'topic', 10)
+        self.publisher_ = self.create_publisher(String, 'packets', 10)
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
     def timer_callback(self):
+        ROS_DOMAIN_ID = os.environ.get('ROS_DOMAIN_ID')
         msg = String()
-        msg.data = 'Hello Mike: %d' % self.i
+#        msg.data = 'Hello Mike: %d' % self.i
+        current_time = self.get_clock().now()
+        # print(type(current_time))
+        msg.data = f'{current_time.nanoseconds}: TB{ROS_DOMAIN_ID}: {self.i}'
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % msg.data)
+        self.get_logger().info(' "%s"' % msg.data)
         self.i += 1
 
 
