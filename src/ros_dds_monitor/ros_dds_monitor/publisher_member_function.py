@@ -23,7 +23,7 @@ import os
 class MinimalPublisher(Node):
 
     def __init__(self):
-        super().__init__('minimal_publisher')
+        super().__init__('talker')
         self.publisher_ = self.create_publisher(String, 'packets', 1)
         timer_period = 0.05  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
@@ -44,17 +44,19 @@ class MinimalPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    minimal_publisher = MinimalPublisher()
+    talker = MinimalPublisher()
 
-    while rclpy.ok() and minimal_publisher.i < 500:
-        rclpy.spin_once(minimal_publisher)
+    while rclpy.ok() and talker.i < 500:
+        rclpy.spin_once(talker)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    minimal_publisher.destroy_node()
+    talker.destroy_node()
     rclpy.shutdown()
 
 
 if __name__ == '__main__':
     main()
+
+
