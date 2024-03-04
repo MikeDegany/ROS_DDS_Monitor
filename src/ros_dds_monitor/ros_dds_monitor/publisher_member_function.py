@@ -24,8 +24,8 @@ class MinimalPublisher(Node):
 
     def __init__(self):
         super().__init__('minimal_publisher')
-        self.publisher_ = self.create_publisher(String, 'packets', 10)
-        timer_period = 0.5  # seconds
+        self.publisher_ = self.create_publisher(String, 'packets', 1)
+        timer_period = 0.05  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
@@ -46,7 +46,8 @@ def main(args=None):
 
     minimal_publisher = MinimalPublisher()
 
-    rclpy.spin(minimal_publisher)
+    while rclpy.ok() and minimal_publisher.i < 500:
+        rclpy.spin_once(minimal_publisher)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically

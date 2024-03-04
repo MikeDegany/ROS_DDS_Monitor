@@ -26,7 +26,7 @@ class MinimalSubscriber(Node):
             String,
             'packets',
             self.listener_callback,
-            10)
+            1)
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
@@ -37,9 +37,9 @@ def main(args=None):
     rclpy.init(args=args)
 
     minimal_subscriber = MinimalSubscriber()
+    print("Shutting down")
 
     rclpy.spin(minimal_subscriber)
-
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
